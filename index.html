@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Kmar | Media Buyer</title>
+    
+    <!-- Tailwind CSS (للتصميم والألوان) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons (للأيقونات) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-gray-100 min-h-screen selection:bg-blue-500/30">
+
+    <!-- --- NAVBAR --- -->
+    <nav class="fixed w-full z-50 top-0 border-b border-gray-800/50 bg-[#0a0a0a]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-tighter text-white">
+                Abdullah<span class="text-blue-500">.</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#brands" class="hover:text-white transition-colors">Brands</a>
+                <a href="#results" class="hover:text-white transition-colors">Results</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+            </div>
+            <a href="#contact" class="bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <!-- --- 1. HERO SECTION --- -->
+    <section class="pt-40 pb-20 px-6 min-h-[90vh] flex flex-col justify-center items-center text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-sm font-medium mb-8">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Accepting New Clients
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl mb-6 leading-tight">
+            I scale brands using <br class="hidden md:block"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
+                data-driven advertising.
+            </span>
+        </h1>
+        
+        <p class="text-xl text-gray-400 max-w-2xl mb-10 font-light">
+            Hi, I'm <strong class="text-white">Abdullah Kmar</strong>. A Performance Marketing Specialist & Media Buyer focused on maximizing your ROI through Meta, Google, and TikTok Ads.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#portfolio" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all">
+                View My Work <i class="ph ph-caret-right text-lg"></i>
+            </a>
+            <a href="#contact" class="bg-transparent border border-gray-700 hover:bg-gray-800 text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <!-- --- 2. ABOUT ME --- -->
+    <section id="about" class="py-24 px-6 bg-gray-900/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 md:text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The Expertise Behind The Numbers</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Specialized in full-funnel performance marketing across the most profitable platforms.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Cards -->
+                <div class="p-8 rounded-3xl bg-gray-900 border border-gray-800 hover:border-blue-500/30 transition-colors">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6">
+                        <i class="ph ph-target text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Meta Ads</h3>
+                    <p class="text-gray-400">Deep expertise in Facebook & Instagram advertising. From campaign structure to creative testing and scaling.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-gray-900 border border-gray-800 hover:border-blue-500/30 transition-colors">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-6">
+                        <i class="ph ph-cursor-click text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Google Ads</h3>
+                    <p class="text-gray-400">Capturing high-intent traffic through Search, Display, and Performance Max campaigns optimized for conversions.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-gray-900 border border-gray-800 hover:border-blue-500/30 transition-colors">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6">
+                        <i class="ph ph-device-mobile text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">TikTok Ads</h3>
+                    <p class="text-gray-400">Tapping into viral growth and younger demographics with native-feeling, high-converting video campaigns.</p>
+                </div>
+            </div>
+
+            <!-- Focus Metrics -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="py-6 px-4 text-center rounded-2xl bg-gray-900/50 border border-gray-800">
+                    <div class="text-sm text-gray-500 mb-1">Core Focus</div>
+                    <div class="font-semibold text-white">Lead Generation</div>
+                </div>
+                <div class="py-6 px-4 text-center rounded-2xl bg-gray-900/50 border border-gray-800">
+                    <div class="text-sm text-gray-500 mb-1">Core Focus</div>
+                    <div class="font-semibold text-white">Conversion Opt.</div>
+                </div>
+                <div class="py-6 px-4 text-center rounded-2xl bg-gray-900/50 border border-gray-800">
+                    <div class="text-sm text-gray-500 mb-1">Core Focus</div>
+                    <div class="font-semibold text-white">Maximize ROI</div>
+                </div>
+                <div class="py-6 px-4 text-center rounded-2xl bg-gray-900/50 border border-gray-800">
+                    <div class="text-sm text-gray-500 mb-1">Core Focus</div>
+                    <div class="font-semibold text-white">Data Analysis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- 3. BRANDS WORKED WITH --- -->
+    <section id="brands" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Trusted By Growing Brands</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group p-8 rounded-2xl bg-gradient-to-b from-gray-800/50 to-gray-900 border border-gray-800 flex flex-col items-center justify-center text-center min-h-[160px] hover:bg-gray-800 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-2">Flourite</h3>
+                    <span class="flex items-center gap-1 text-xs font-medium text-gray-500 uppercase tracking-wider"><i class="ph ph-globe text-sm"></i> Saudi Arabia</span>
+                </div>
+                
+                <div class="group p-8 rounded-2xl bg-gradient-to-b from-gray-800/50 to-gray-900 border border-gray-800 flex flex-col items-center justify-center text-center min-h-[160px] hover:bg-gray-800 transition-all">
+                    <h3 class="text-xl font-bold text-white mb-2 leading-tight">Achievement Services Broker</h3>
+                    <span class="flex items-center gap-1 text-xs font-medium text-gray-500 uppercase tracking-wider"><i class="ph ph-globe text-sm"></i> UAE</span>
+                </div>
+                
+                <div class="group p-8 rounded-2xl bg-gradient-to-b from-gray-800/50 to-gray-900 border border-gray-800 flex flex-col items-center justify-center text-center min-h-[160px] hover:bg-gray-800 transition-all">
+                    <h3 class="text-xl font-bold text-white mb-2 leading-tight">Juventus<br/>Car Rental</h3>
+                    <span class="flex items-center gap-1 text-xs font-medium text-gray-500 uppercase tracking-wider"><i class="ph ph-globe text-sm"></i> UAE</span>
+                </div>
+                
+                <div class="group p-8 rounded-2xl bg-gradient-to-b from-gray-800/50 to-gray-900 border border-gray-800 flex flex-col items-center justify-center text-center min-h-[160px] hover:bg-gray-800 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-2">Code Wave</h3>
+                    <span class="flex items-center gap-1 text-xs font-medium text-gray-500 uppercase tracking-wider"><i class="ph ph-globe text-sm"></i> Egypt</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- 4. RESULTS SECTION 🔥 --- -->
+    <section id="results" class="py-24 px-6 bg-blue-900/5 border-y border-blue-900/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                
+                <!-- Text & Metrics -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 flex items-center gap-3">
+                        Numbers Speak <br/> Louder <i class="ph ph-trend-up text-blue-500 text-[40px]"></i>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-10">
+                        I don't just run ads; I buy data and optimize for the lowest possible cost per acquisition. Here is a glimpse of the impact.
+                    </p>
+                    
+                    <!-- <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-4xl font-extrabold text-white mb-1">15K+</div>
+                            <div class="text-sm text-gray-400">Messaging Conversations Started</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-extrabold text-white mb-1">$-.--</div>
+                            <div class="text-sm text-gray-400">Record Low Cost Per Result</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-extrabold text-white mb-1">5M+</div>
+                            <div class="text-sm text-gray-400">Targeted Reach</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-extrabold text-white mb-1">12M+</div>
+                            <div class="text-sm text-gray-400">Total Impressions</div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Dashboard Screenshots -->
+                <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                    <!-- Dashboard 1 (Google Ads - Govents) -->
+                    <div class="w-full h-48 md:h-64 bg-black rounded-2xl border border-gray-800 flex flex-col items-center justify-center text-gray-600 relative overflow-hidden group">
+                        <img src="images/govents.jpeg" alt="Google Ads Dashboard" class="w-full h-full object-contain p-2 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Dashboard 2 (Meta Ads - Messaging 1) -->
+                    <div class="w-full h-48 md:h-64 bg-black rounded-2xl border border-gray-800 flex flex-col items-center justify-center text-gray-600 relative overflow-hidden group">
+                        <img src="images/WhatsApp Image 2026-05-03 at 4.23.01 PM (1).jpeg" alt="Meta Ads Dashboard" class="w-full h-full object-contain p-2 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- --- 5. PORTFOLIO / CAMPAIGNS SECTION --- -->
+    <section id="portfolio" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Campaign Highlights</h2>
+                    <p class="text-gray-400 text-lg">A selection of winning creatives and campaign structures.</p>
+                </div>
+            </div>
+
+            <!-- Changed to 2 columns to fit the remaining 2 images beautifully -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Portfolio Item 1 (Google Ads - Achievement) -->
+                <div class="group cursor-pointer">
+                    <div class="w-full aspect-[16/9] bg-black rounded-2xl border border-gray-800 flex flex-col items-center justify-center text-gray-600 mb-4 overflow-hidden relative">
+                        <img src="images/Achievement.jpeg" alt="Achievement Services Google Ads" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500 z-0">
+                        <div class="absolute inset-0 bg-gray-900/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-1">Achievement Services Broker</h4>
+                    <p class="text-sm text-gray-400">Google Ads • Clicks & Conversions</p>
+                </div>
+
+                <!-- Portfolio Item 2 (Meta Ads - Messaging 2) -->
+                <div class="group cursor-pointer">
+                    <div class="w-full aspect-[16/9] bg-black rounded-2xl border border-gray-800 flex flex-col items-center justify-center text-gray-600 mb-4 overflow-hidden relative">
+                        <img src="images/WhatsApp Image 2026-05-03 at 4.23.01 PM.jpeg" alt="Meta Ads Tailored Messages" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500 z-0">
+                        <div class="absolute inset-0 bg-gray-900/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-1">Tailored Messages Campaign</h4>
+                    <p class="text-sm text-gray-400">Meta Ads • Messaging Conversations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- 6. CONTACT SECTION --- -->
+    <section id="contact" class="py-24 px-6 bg-gray-900/50">
+        <div class="max-w-4xl mx-auto bg-gray-900 rounded-3xl border border-gray-800 overflow-hidden shadow-2xl p-10 md:p-16 text-center flex flex-col items-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Ready to scale?</h2>
+            <p class="text-gray-400 mb-10 max-w-xl text-lg">Let's discuss how we can improve your current metrics and hit your revenue goals.</p>
+            
+            <div class="flex flex-col md:flex-row gap-6 mb-12 w-full justify-center">
+                <!-- Email -->
+                <div class="flex items-center gap-4 bg-gray-800/40 p-6 rounded-2xl border border-gray-800 w-full md:w-auto justify-center md:justify-start">
+                    <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-blue-400 shrink-0">
+                        <i class="ph ph-envelope-simple text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm text-gray-500">Email Me</div>
+                        <div class="font-medium text-lg">abdallaamoe@gmail.com</div>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp -->
+                <div class="flex items-center gap-4 bg-gray-800/40 p-6 rounded-2xl border border-gray-800 w-full md:w-auto justify-center md:justify-start">
+                    <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-green-400 shrink-0">
+                        <i class="ph ph-whatsapp-logo text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm text-gray-500">WhatsApp</div>
+                        <a href="https://wa.me/201037158561" target="_blank" class="font-medium text-lg hover:text-green-400 transition-colors">
+                            01037158561
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex items-center justify-center gap-4 mb-12">
+                <a href="https://facebook.com/abdullahkmar" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-blue-500 hover:bg-gray-700 transition-all hover:scale-110" title="Facebook">
+                    <i class="ph ph-facebook-logo text-2xl"></i>
+                </a>
+                <a href="https://instagram.com/abdullahkmar" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-gray-700 transition-all hover:scale-110" title="Instagram">
+                    <i class="ph ph-instagram-logo text-2xl"></i>
+                </a>
+              
+                <a href="https://linkedin.com/in/abdullahkmar" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-gray-700 transition-all hover:scale-110" title="LinkedIn">
+                    <i class="ph ph-linkedin-logo text-2xl"></i>
+                </a>
+            </div>
+
+            <!-- Linktree Button -->
+            <a href="https://linktr.ee/abdullah_kmar" target="_blank" class="inline-flex items-center justify-center gap-3 bg-white text-black px-10 py-5 rounded-2xl font-bold hover:bg-gray-200 transition-all hover:scale-105 active:scale-95 w-full md:w-auto text-lg shadow-[0_0_40px_rgba(255,255,255,0.1)]">
+                <i class="ph ph-link text-2xl"></i> Contact via Linktree
+            </a>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer class="py-8 text-center border-t border-gray-800 text-gray-500 text-sm bg-[#0a0a0a]">
+        <!-- Social Icons in Footer -->
+        <!-- <div class="flex justify-center gap-6 mb-4">
+            <a href="https://facebook.com/abdullahkmar" target="_blank" class="hover:text-blue-500 transition-colors"><i class="ph ph-facebook-logo text-2xl"></i></a>
+            <a href="https://instagram.com/abdullahkmar" target="_blank" class="hover:text-pink-500 transition-colors"><i class="ph ph-instagram-logo text-2xl"></i></a>
+            <a href="https://youtube.com/@abdullahkmar" target="_blank" class="hover:text-red-500 transition-colors"><i class="ph ph-youtube-logo text-2xl"></i></a>
+            <a href="https://linkedin.com/in/abdullahkmar" target="_blank" class="hover:text-blue-400 transition-colors"><i class="ph ph-linkedin-logo text-2xl"></i></a>
+        </div> -->
+        <p>© 2026 Abdullah Kmar. All rights reserved.</p>
+        <p class="mt-1">Performance Marketing & Media Buying</p>
+    </footer>
+
+</body>
+</html>
