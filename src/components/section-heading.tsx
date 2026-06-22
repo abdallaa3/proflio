@@ -7,7 +7,7 @@ type SectionHeadingProps = {
 export function SectionHeading({ title, subtitle, align = "start" }: SectionHeadingProps) {
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
         {title}
       </h2>
       {subtitle ? (

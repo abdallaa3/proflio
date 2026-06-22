@@ -22,11 +22,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "عبدالله قمر | مختص تسويق أداء وميديا باير",
+    default: "عبدالله قمر | ميديا باير ومتخصص تسويق أداء",
     template: "%s | Abdullah Kmar",
   },
   description:
-    "Portfolio website for Abdullah Kmar, performance marketing specialist and media buyer for Meta, Google, Instagram, and TikTok ads.",
+    "Portfolio website for Abdullah Kmar, a performance marketing specialist and media buyer for Meta, Google, Instagram, and TikTok ads.",
   keywords: [
     "عبدالله قمر",
     "Abdullah Kmar",
@@ -68,6 +68,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
+      data-scroll-behavior="smooth"
       className={`${cairo.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-background text-foreground">{children}</body>

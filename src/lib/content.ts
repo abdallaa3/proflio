@@ -5,30 +5,159 @@ export type Campaign = {
   image: string;
   width: number;
   height: number;
+  alt?: Record<Locale, string>;
   platform: string;
+  business: Record<Locale, string>;
+  goal: Record<Locale, string>;
+  optimized: Record<Locale, string>;
+  result: Record<Locale, string>;
   title: Record<Locale, string>;
   description: Record<Locale, string>;
   details: Record<Locale, string[]>;
 };
 
+export type Brand = {
+  name: string;
+  market: Record<Locale, string>;
+  context: Record<Locale, string>;
+};
+
 export const campaigns: Campaign[] = [
+  {
+    slug: "meta-messaging-table-results",
+    image: "/assets/images/campaign-meta-messaging-table-results.png",
+    width: 1805,
+    height: 420,
+    alt: {
+      ar: "لقطة نظيفة من جدول مدير إعلانات Meta تعرض نتائج حملات رسائل متعددة مع المحادثات والوصول والظهور والإنفاق",
+      en: "Clean Meta Ads Manager table screenshot showing multiple messaging campaign results, reach, impressions, and spend",
+    },
+    platform: "Meta Ads / Messaging Campaigns",
+    business: {
+      ar: "حملات رسائل على فيسبوك وإنستجرام",
+      en: "Facebook and Instagram messaging campaigns",
+    },
+    goal: {
+      ar: "توليد محادثات ورسائل مؤهلة مع متابعة تكلفة النتيجة وحجم الوصول والظهور.",
+      en: "Generate qualified message conversations while tracking cost per result, reach, and impressions.",
+    },
+    optimized: {
+      ar: "اختبار الرسائل والجمهور، مراقبة تكلفة النتيجة، وتحسين الحملات حسب حجم المحادثات وجودتها.",
+      en: "Messaging angles, audience testing, cost per result, and campaign performance by conversation volume and quality.",
+    },
+    result: {
+      ar: "التقرير الظاهر يعرض 5 حملات بإجمالي 1,544 نتيجة، 358,116 ظهورًا، 148,297 وصولًا، وإنفاقًا تقريبيًا 163.59 دولار.",
+      en: "The visible report shows 5 campaigns with 1,544 total results, 358,116 impressions, 148,297 reach, and approximately $163.59 spent.",
+    },
+    title: {
+      ar: "حملات رسائل على Meta بأكثر من 1,500 نتيجة",
+      en: "Meta messaging campaigns with 1,500+ visible results",
+    },
+    description: {
+      ar: "إدارة وتحسين مجموعة حملات رسائل على فيسبوك/إنستجرام مع متابعة تكلفة النتيجة، الوصول، مرات الظهور، وحجم المحادثات الناتجة. تُظهر النتائج قدرة الحملات على توليد محادثات مؤهلة بتكلفة منخفضة لكل نتيجة.",
+      en: "Managed and optimized multiple Meta messaging campaigns with a focus on cost per result, reach, impressions, and conversation volume. The visible report highlights efficient message generation and strong campaign testing across audiences and creatives.",
+    },
+    details: {
+      ar: [
+        "1,544+ نتيجة/محادثة ظاهرة",
+        "358K+ ظهور ظاهر",
+        "148K+ وصول ظاهر",
+        "أفضل حملة: 665 نتيجة بتكلفة تقريبية 0.08 دولار",
+        "تحسين مستمر للرسائل والجمهور والتكلفة",
+      ],
+      en: [
+        "1,544+ visible results/conversations",
+        "358K+ visible impressions",
+        "148K+ visible reach",
+        "Best campaign: 665 results at around $0.08",
+        "Continuous messaging, audience, and cost optimization",
+      ],
+    },
+  },
+  {
+    slug: "swimming-coach-uae-meta-ads",
+    image: "/assets/images/swimming-coach-uae-meta-ads.png",
+    width: 715,
+    height: 1438,
+    alt: {
+      ar: "لقطة من تطبيق Meta Ads تعرض حملة رسائل لمدرب سباحة في الإمارات مع الإنفاق والنتائج وتوصية تحسين تكلفة المحادثة",
+      en: "Meta Ads mobile screenshot showing a UAE swimming coach messaging campaign with spend, results, and a conversation cost optimization recommendation",
+    },
+    platform: "Meta Ads / Local Services",
+    business: {
+      ar: "مدرب سباحة وخدمة تدريب محلية في الإمارات",
+      en: "Swimming coach and local training service in the UAE",
+    },
+    goal: {
+      ar: "جذب محادثات مباشرة من أشخاص مهتمين بخدمة تدريب السباحة داخل السوق المحلي.",
+      en: "Generate direct conversations from people interested in swimming training in the local market.",
+    },
+    optimized: {
+      ar: "متابعة تكلفة المحادثة، الإنفاق، نتيجة الحملة، وتوصيات Meta لتحسين تكلفة المحادثات حسب إعدادات الحملة ونطاق التاريخ المحدد.",
+      en: "Cost per conversation, spend, campaign results, and Meta recommendations based on the selected date range and campaign settings.",
+    },
+    result: {
+      ar: "التقرير الظاهر يعرض 360 نتيجة/محادثة، تكلفة تقريبية 0.39 دولار لكل نتيجة، وإنفاقًا ظاهرًا 139.19 دولار.",
+      en: "The visible report shows 360 results/conversations, approximately $0.39 cost per result, and $139.19 visible spend.",
+    },
+    title: {
+      ar: "حملة رسائل لمدرب سباحة في الإمارات",
+      en: "Messaging campaign for a swimming coach in the UAE",
+    },
+    description: {
+      ar: "حملة Meta Ads موجهة لخدمة تدريب سباحة في الإمارات، ركزت على جذب محادثات مهتمة بتكلفة مناسبة لكل نتيجة، مع متابعة توصيات التحسين داخل مدير الإعلانات.",
+      en: "A Meta Ads campaign for a UAE-based swimming training service, focused on generating interested conversations at an efficient cost per result while monitoring optimization recommendations inside Ads Manager.",
+    },
+    details: {
+      ar: [
+        "360 نتيجة/محادثة ظاهرة",
+        "تكلفة تقريبية 0.39 دولار لكل نتيجة",
+        "إنفاق ظاهر 139.19 دولار",
+        "توصية Meta: تكلفة محادثة أقل بنسبة محتملة 7%",
+        "مناسب لخدمات التدريب المحلي والاستفسارات المباشرة",
+      ],
+      en: [
+        "360 visible results/conversations",
+        "Approx. $0.39 cost per result",
+        "$139.19 total visible spend",
+        "Meta recommendation: potential 7% lower cost per conversation",
+        "Suitable for local coaching and direct inquiry generation",
+      ],
+    },
+  },
   {
     slug: "govents-google-ads",
     image: "/assets/images/campaign-govents-google-ads.jpeg",
     width: 1529,
     height: 617,
     platform: "Google Ads",
+    business: {
+      ar: "خدمات فعاليات وتجهيزات في سوق الإمارات",
+      en: "Events and production services in the UAE market",
+    },
+    goal: {
+      ar: "جذب زيارات عالية النية من البحث وتحويلها إلى فرص تواصل قابلة للمتابعة.",
+      en: "Capture high-intent search traffic and turn it into follow-up opportunities.",
+    },
+    optimized: {
+      ar: "هيكل الحملة، الكلمات المفتاحية، تكلفة النقرة، ومؤشرات التفاعل داخل لوحة الأداء.",
+      en: "Campaign structure, keywords, cost per click, and engagement signals inside the dashboard.",
+    },
+    result: {
+      ar: "تُظهر اللقطة 7.57 ألف نقرة، 4.11 ألف تفاعل، ومتوسط تكلفة نقرة 1.35 درهم.",
+      en: "The screenshot shows 7.57K clicks, 4.11K interactions, and a 1.35 AED average CPC.",
+    },
     title: {
-      ar: "تحسين حملات بحث لخدمات الفعاليات",
+      ar: "تحسين حملة بحث لخدمات الفعاليات",
       en: "Search campaign optimization for events services",
     },
     description: {
-      ar: "لقطة من لوحة أداء توضح متابعة دقيقة للنقرات والتكلفة والتحسين المستمر للحملة.",
-      en: "A performance dashboard view showing close tracking of clicks, cost, and ongoing campaign optimization.",
+      ar: "حملة بحث مبنية على قراءة الطلب الفعلي، مع متابعة دقيقة للتكلفة وجودة الزيارات بدل الاكتفاء بحجم النقرات.",
+      en: "A search campaign shaped around real demand, with cost and traffic quality tracked beyond click volume.",
     },
     details: {
-      ar: ["هيكلة حملات بحث", "متابعة تكلفة النتيجة", "تحسين الكلمات والإعلانات"],
-      en: ["Search campaign structure", "Cost-per-result tracking", "Keyword and ad optimization"],
+      ar: ["المنصة: Google Ads", "النشاط: فعاليات", "الهدف: زيارات مؤهلة", "التحسين: الكلمات والتكلفة"],
+      en: ["Platform: Google Ads", "Industry: Events", "Goal: Qualified visits", "Optimized: Keywords and cost"],
     },
   },
   {
@@ -37,17 +166,33 @@ export const campaigns: Campaign[] = [
     width: 1600,
     height: 506,
     platform: "Google Ads",
+    business: {
+      ar: "خدمات وساطة وإنجاز معاملات في الإمارات",
+      en: "Brokerage and processing services in the UAE",
+    },
+    goal: {
+      ar: "الوصول إلى باحثين لديهم نية واضحة وقياس تكلفة الزيارة وجودة الزيارات الناتجة.",
+      en: "Reach searchers with clear intent while measuring visit cost and traffic quality.",
+    },
+    optimized: {
+      ar: "المجموعات الإعلانية، مناطق الاستهداف، الكلمات، ومراقبة التكلفة مقابل الزيارات.",
+      en: "Ad groups, location targeting, keywords, and cost control against visit volume.",
+    },
+    result: {
+      ar: "تُظهر اللقطة 409 نقرة، 2,425 ظهورًا، ومتوسط تكلفة نقرة 37.52 ج.م.",
+      en: "The screenshot shows 409 clicks, 2,425 impressions, and a 37.52 EGP average CPC.",
+    },
     title: {
-      ar: "حملة لخدمات الوساطة وإنجاز المعاملات",
-      en: "Campaign for brokerage and processing services",
+      ar: "حملة بحث لخدمات الوساطة وإنجاز المعاملات",
+      en: "Search campaign for brokerage and processing services",
     },
     description: {
-      ar: "نتائج حملة لخدمة موجهة لسوق الإمارات مع تركيز على جودة الزيارات وفرص التحويل.",
-      en: "Campaign results for a UAE-focused service with emphasis on qualified traffic and conversion opportunities.",
+      ar: "حملة موجهة لسوق الإمارات مع تركيز على نية البحث، جودة الزيارات، وفرص التحويل التي يمكن متابعتها بعد النقر.",
+      en: "A UAE-focused search campaign centered on intent, qualified visits, and post-click conversion opportunities.",
     },
     details: {
-      ar: ["سوق الإمارات", "زيارات مؤهلة", "تحسين التحويل"],
-      en: ["UAE market", "Qualified visits", "Conversion optimization"],
+      ar: ["المنصة: Google Ads", "السوق: الإمارات", "الهدف: زيارات مؤهلة", "التحسين: الاستهداف والتكلفة"],
+      en: ["Platform: Google Ads", "Market: UAE", "Goal: Qualified visits", "Optimized: Targeting and cost"],
     },
   },
   {
@@ -56,17 +201,33 @@ export const campaigns: Campaign[] = [
     width: 719,
     height: 1065,
     platform: "Meta Ads",
+    business: {
+      ar: "حملة رسائل عبر فيسبوك وإنستجرام",
+      en: "Facebook and Instagram messaging campaign",
+    },
+    goal: {
+      ar: "تحويل الاهتمام إلى محادثات فعلية يمكن لفريق المبيعات متابعتها.",
+      en: "Turn attention into real conversations the sales team can follow up with.",
+    },
+    optimized: {
+      ar: "الجمهور، الرسالة، الكرياتيف، وتكلفة بدء المحادثة.",
+      en: "Audience, message, creative, and cost per messaging conversation started.",
+    },
+    result: {
+      ar: "تُظهر اللقطة 1,541 محادثة بدأت بتكلفة 0.0883 دولار للمحادثة وإنفاق 136.03 دولار.",
+      en: "The screenshot shows 1,541 messaging conversations started at $0.0883 each with $136.03 spent.",
+    },
     title: {
-      ar: "نتائج رسائل على فيسبوك وإنستجرام",
+      ar: "نتائج حملة رسائل على فيسبوك وإنستجرام",
       en: "Facebook and Instagram messaging results",
     },
     description: {
-      ar: "حملة رسائل مبنية على اختبار الجمهور والكرياتيف للوصول إلى محادثات أكثر جودة.",
-      en: "A messaging campaign built around audience and creative testing to generate higher-quality conversations.",
+      ar: "اختبار رسائل وجماهير بهدف الوصول إلى محادثات أكثر قابلية للمتابعة، مع قراءة واضحة للتكلفة والحجم.",
+      en: "Message and audience testing designed to drive conversations that are easier to qualify and follow up.",
     },
     details: {
-      ar: ["حملات رسائل", "اختبار جماهير", "تحسين الكرياتيف"],
-      en: ["Messaging campaigns", "Audience testing", "Creative optimization"],
+      ar: ["المنصة: Meta Ads", "الهدف: رسائل", "التحسين: الجمهور والكرياتيف", "النتيجة: 1,541 محادثة"],
+      en: ["Platform: Meta Ads", "Goal: Messages", "Optimized: Audience and creative", "Result: 1,541 conversations"],
     },
   },
   {
@@ -75,17 +236,33 @@ export const campaigns: Campaign[] = [
     width: 705,
     height: 1064,
     platform: "Meta Ads",
+    business: {
+      ar: "حملة رسائل مخصصة حسب نية العميل",
+      en: "Intent-based tailored messaging campaign",
+    },
+    goal: {
+      ar: "رفع عدد المحادثات المؤهلة عبر رسالة مباشرة ومسار تواصل واضح.",
+      en: "Increase qualified conversations through a clear message and follow-up path.",
+    },
+    optimized: {
+      ar: "صياغة الرسالة، جودة الجمهور، الميزانية اليومية، وتكلفة بدء المحادثة.",
+      en: "Message angle, audience quality, daily budget, and cost per messaging conversation started.",
+    },
+    result: {
+      ar: "تُظهر اللقطة 1,300 محادثة بدأت بتكلفة 0.0822 دولار للمحادثة وإنفاق 106.90 دولار.",
+      en: "The screenshot shows 1,300 messaging conversations started at $0.0822 each with $106.90 spent.",
+    },
     title: {
       ar: "حملة رسائل مخصصة حسب نية العميل",
       en: "Tailored messages campaign by customer intent",
     },
     description: {
-      ar: "استخدام رسائل مخصصة ومسارات تواصل واضحة لتحويل الاهتمام إلى محادثات قابلة للمتابعة.",
-      en: "Custom message flows and clear follow-up paths designed to turn interest into actionable conversations.",
+      ar: "مسار رسائل مختصر يربط بين الإعلان والمحادثة، مع تحسين مستمر للتكلفة وجودة الجمهور.",
+      en: "A focused messaging flow connecting the ad to the conversation, with steady cost and audience-quality optimization.",
     },
     details: {
-      ar: ["رسائل مخصصة", "مسار متابعة", "تحسين تكلفة المحادثة"],
-      en: ["Tailored messages", "Follow-up flow", "Conversation cost optimization"],
+      ar: ["المنصة: Meta Ads", "الهدف: رسائل", "التحسين: الرسالة والتكلفة", "النتيجة: 1,300 محادثة"],
+      en: ["Platform: Meta Ads", "Goal: Messages", "Optimized: Message and cost", "Result: 1,300 conversations"],
     },
   },
 ];
@@ -93,21 +270,21 @@ export const campaigns: Campaign[] = [
 export const dictionary = {
   ar: {
     meta: {
-      homeTitle: "عبدالله قمر | مختص تسويق أداء وميديا باير",
+      homeTitle: "عبدالله قمر | ميديا باير ومتخصص تسويق أداء",
       homeDescription:
-        "موقع عبدالله قمر الشخصي: مختص تسويق أداء وميديا باير لإعلانات ميتا وجوجل وإنستجرام وتيك توك.",
+        "بورتفوليو عبدالله قمر، ميديا باير ومتخصص تسويق أداء لحملات Meta وGoogle وInstagram وTikTok مع تركيز على العملاء المحتملين والتحسين القابل للقياس.",
       campaignsTitle: "نتائج الحملات | عبدالله قمر",
       campaignsDescription:
-        "معرض منظم لنتائج الحملات الإعلانية ولوحات الأداء الخاصة بعبدالله قمر.",
+        "دراسات حالة مختصرة ولقطات أداء حقيقية لحملات إعلانية يديرها عبدالله قمر عبر Google وMeta.",
       cvTitle: "السيرة الذاتية | عبدالله قمر",
       cvDescription:
-        "السيرة الذاتية المهنية لعبدالله قمر، مختص تسويق أداء وميديا باير.",
+        "السيرة المهنية لعبدالله قمر، متخصص تسويق أداء وميديا باير يركز على حملات جلب العملاء والتحسين المبني على البيانات.",
     },
     nav: {
       about: "نبذة",
       services: "الخدمات",
       campaigns: "الحملات",
-      cv: "السيرة الذاتية",
+      cv: "السيرة",
       contact: "تواصل",
       language: "English",
     },
@@ -122,94 +299,141 @@ export const dictionary = {
       openPreview: "فتح المعاينة",
       close: "إغلاق",
       pageIntro: "Portfolio",
+      caseStudy: "دراسة حالة مختصرة",
+      business: "النشاط",
+      goal: "الهدف",
+      optimized: "ما تم تحسينه",
+      result: "نتيجة ظاهرة",
+      primaryCta: "ابدأ عبر واتساب",
+      secondaryLinks: "روابط أخرى",
     },
     home: {
-      heroTitle: "أحوّل الميزانيات الإعلانية إلى نمو قابل للقياس.",
+      heroTitle: "إعلانات مدفوعة مصممة لجلب عملاء ونتائج قابلة للقياس",
       heroLead:
-        "أنا عبدالله قمر، مختص تسويق أداء وميديا باير أعمل على بناء وتحسين حملات Meta وGoogle وTikTok للوصول إلى عملاء محتملين أفضل وتكلفة أكثر كفاءة.",
+        "أساعد الأنشطة التجارية على إطلاق وتحسين حملات ميتا وجوجل وتيك توك وإنستجرام بتركيز واضح على جودة العملاء المحتملين، تكلفة النتيجة، تتبع التحويلات، وتحسين الأداء خطوة بخطوة.",
       heroPoints: ["Meta Ads", "Google Ads", "Instagram Ads", "TikTok Ads"],
-      aboutTitle: "خبرة عملية خلف كل قرار إعلاني",
+      aboutTitle: "قرارات إعلانية مبنية على البيانات لا الانطباعات",
       aboutBody:
-        "أركز على الصورة الكاملة: فهم السوق، بناء هيكل الحملة، اختبار الرسائل والكرياتيف، قراءة البيانات، ثم تحسين الإنفاق حتى يصبح كل قرار مبنيًا على رقم واضح.",
-      servicesTitle: "خدمات تسويق أداء مصممة للنمو",
+        "أتعامل مع الحملة كنظام كامل: فهم السوق، بناء الهيكل، اختيار الرسالة، اختبار الجمهور والكرياتيف، قراءة الأرقام، ثم تحسين الإنفاق حتى يصبح كل قرار مرتبطًا بهدف تجاري واضح.",
+      servicesTitle: "خدمات تسويق أداء واضحة وقابلة للقياس",
       servicesSubtitle:
-        "من التخطيط إلى التحسين اليومي، الهدف هو بناء منظومة حملات قابلة للتوسع وليست مجرد إعلانات منفصلة.",
-      brandsTitle: "علامات ومشروعات عملت عليها",
-      campaignsTitle: "نتائج حملات حقيقية في عرض نظيف",
+        "من التخطيط إلى التحسين اليومي، أركز على بناء منظومة حملات تجلب فرصًا أفضل وتقلل الهدر في الميزانية.",
+      brandsTitle: "خبرات عبر أسواق ومشروعات مختلفة",
+      campaignsTitle: "نتائج حملات حقيقية بصيغة دراسات حالة",
       campaignsSubtitle:
-        "الصور محفوظة بنسبة أبعادها الأصلية حتى تظهر لوحات النتائج بوضوح بدون تمدد أو قص عشوائي.",
-      cvTitle: "سيرة ذاتية مختصرة وسهلة الوصول",
+        "كل بطاقة توضح المنصة، نوع النشاط، الهدف، ما تم تحسينه، والنتيجة الظاهرة في الصورة عندما تكون الأرقام واضحة.",
+      campaignsCtaTitle: "هل تريد نتائج مشابهة؟",
+      campaignsCtaBody: "تواصل معي لمراجعة حملتك الحالية وتحديد فرص تحسين عملية في الاستهداف، الرسالة، والتكلفة.",
+      cvTitle: "سيرة مهنية مختصرة تعرض ما يهم فعلًا",
       cvBody:
-        "صفحة السيرة تعرض الخبرة، الأدوات، المهارات، ومعلومات التواصل، مع زر لتحميل ملف السيرة الأصلي.",
-      contactTitle: "جاهز لتحسين نتائج حملاتك؟",
+        "ملخص واضح للمهارات والمنصات والخبرة العملية، مع ملف PDF جاهز للتحميل ومعلومات تواصل مباشرة.",
+      contactTitle: "هل لديك حملة تحتاج إلى تحسين؟",
       contactBody:
-        "أرسل تفاصيل نشاطك أو هدف الحملة، وسأعود لك بخطوات عملية لتحسين الأداء.",
+        "أرسل تفاصيل نشاطك أو حملتك الحالية، وسأقترح لك خطوات عملية لتحسين النتائج.",
     },
     services: [
       {
-        title: "إعلانات Meta",
-        body: "بناء حملات فيسبوك وإنستجرام، اختبار جماهير وكرياتيف، وتحسين تكلفة الرسائل أو التحويلات.",
+        title: "حملات Meta Ads",
+        body: "بناء وتحسين حملات فيسبوك وإنستجرام للرسائل، العملاء المحتملين، أو التحويلات مع اختبار الجمهور والكرياتيف.",
       },
       {
-        title: "إعلانات Google",
-        body: "حملات بحث وعرض وPerformance Max تركز على الزيارات عالية النية وفرص التحويل.",
+        title: "إعلانات Google Search",
+        body: "حملات بحث تستهدف نية شراء أو طلب واضحة، مع تحسين الكلمات، الإعلانات، وتكلفة الزيارة المؤهلة.",
       },
       {
-        title: "تحليل وتحسين الأداء",
-        body: "متابعة مؤشرات التكلفة، جودة العملاء المحتملين، ونقاط الهدر لتحويل البيانات إلى قرارات.",
+        title: "مسارات جلب العملاء",
+        body: "ربط الإعلان برسالة أو صفحة أو واتساب بطريقة تقلل الاحتكاك وتزيد فرص المتابعة من فريق المبيعات.",
+      },
+      {
+        title: "التتبع وتحليل الحملات",
+        body: "مراجعة مؤشرات الأداء، تكلفة النتيجة، جودة الرسائل، ونقاط الهدر لتحويل البيانات إلى قرارات تنفيذية.",
+      },
+      {
+        title: "تحسين التحويلات",
+        body: "تحسين الرسائل والعروض ونقاط التواصل بعد النقر لرفع جودة العملاء وتقليل تكلفة الفرصة.",
+      },
+      {
+        title: "إعادة الاستهداف واختبار الجمهور",
+        body: "تقسيم الجماهير، اختبار النوايا، وبناء حملات إعادة استهداف تساعد على استرجاع العملاء الأكثر اهتمامًا.",
       },
     ],
-    focus: ["Lead Generation", "Conversion Optimization", "Maximize ROI", "Data Analysis"],
+    focus: ["Lead Generation", "Conversion Tracking", "Cost Per Result", "Audience Testing"],
     brands: [
-      ["Flourite", "السعودية"],
-      ["Achievement Services Broker", "الإمارات"],
-      ["Juventus Car Rental", "الإمارات"],
-      ["Code Wave", "مصر"],
-    ],
+      {
+        name: "Flourite",
+        market: { ar: "السعودية", en: "Saudi Arabia" },
+        context: {
+          ar: "حملات أداء لزيادة الطلب وتحسين جودة فرص التواصل.",
+          en: "Performance campaigns focused on demand generation and lead quality.",
+        },
+      },
+      {
+        name: "Achievement Services Broker",
+        market: { ar: "الإمارات", en: "UAE" },
+        context: {
+          ar: "إعلانات بحث لخدمات وساطة وإنجاز معاملات داخل سوق تنافسي.",
+          en: "Search ads for brokerage and processing services in a competitive market.",
+        },
+      },
+      {
+        name: "Juventus Car Rental",
+        market: { ar: "الإمارات", en: "UAE" },
+        context: {
+          ar: "حملات لجذب طلبات تأجير سيارات وتحسين جودة الاستفسارات.",
+          en: "Campaigns to generate car-rental inquiries and improve lead quality.",
+        },
+      },
+      {
+        name: "Code Wave",
+        market: { ar: "مصر", en: "Egypt" },
+        context: {
+          ar: "دعم تسويقي لمشروع خدمات رقمية مع تركيز على وضوح العرض.",
+          en: "Marketing support for a digital-services project with clearer positioning.",
+        },
+      },
+    ] satisfies Brand[],
     cv: {
       title: "السيرة الذاتية",
+      profileTitle: "ملخص مهني",
       summary:
-        "مختص تسويق أداء وميديا باير يركز على حملات جلب العملاء المحتملين، تحسين تكلفة النتيجة، وبناء قرارات إعلانية مبنية على البيانات.",
-      experienceTitle: "الخبرة",
-      experience: [
-        {
-          role: "Performance Marketing Specialist & Media Buyer",
-          company: "مشروعات عملاء متعددة",
-          period: "2024 - الآن",
-          bullets: [
-            "إدارة وتحسين حملات Meta وGoogle وTikTok حسب هدف النشاط.",
-            "تحليل النتائج اليومية واكتشاف فرص تقليل الهدر ورفع جودة العملاء المحتملين.",
-            "اختبار الرسائل والكرياتيف والجماهير للوصول إلى تكلفة أفضل لكل نتيجة.",
-          ],
-        },
+        "ميديا باير ومتخصص تسويق أداء أعمل على حملات جلب العملاء وتحسين تكلفة النتيجة عبر Meta وGoogle وTikTok، مع اهتمام خاص بجودة الرسائل، تتبع التحويلات، وتحويل البيانات اليومية إلى قرارات قابلة للتنفيذ.",
+      coreSkillsTitle: "المهارات الأساسية",
+      coreSkills: [
+        "استراتيجية الحملات",
+        "شراء الوسائط",
+        "جلب العملاء المحتملين",
+        "تحسين تكلفة النتيجة",
+        "اختبار الجمهور والكرياتيف",
+        "تحليل التقارير",
       ],
-      skillsTitle: "المهارات",
-      skills: [
-        "Campaign Strategy",
-        "Media Buying",
-        "Lead Generation",
-        "Conversion Tracking",
-        "Creative Testing",
-        "Reporting",
+      platformsTitle: "منصات الإعلانات",
+      platforms: ["Meta Ads Manager", "Google Ads", "TikTok Ads", "Instagram Ads"],
+      highlightsTitle: "أبرز الخبرات",
+      highlights: [
+        "إطلاق وتحسين حملات رسائل وتحويلات وزيارات حسب هدف كل نشاط.",
+        "مراجعة جودة العملاء المحتملين وليس عددهم فقط لضبط الاستهداف والرسائل.",
+        "تحليل التكلفة اليومية واكتشاف فرص تقليل الهدر وتحسين العائد.",
+        "اختبار زوايا إعلانية وجماهير متعددة للوصول إلى تكلفة أفضل لكل نتيجة.",
       ],
-      toolsTitle: "الأدوات والمنصات",
-      tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads", "Google Analytics", "Looker Studio"],
-      educationTitle: "التعليم",
-      education: "خلفية عملية في التسويق الرقمي وتحليل أداء الحملات.",
-      contactTitle: "معلومات التواصل",
+      toolsTitle: "الأدوات",
+      tools: ["Google Analytics", "Looker Studio", "Meta Events Manager", "Google Tag Manager", "Sheets"],
+      downloadTitle: "تحميل السيرة",
+      downloadBody: "يمكنك تحميل نسخة PDF للاطلاع السريع أو مشاركتها مع فريقك.",
+      contactTitle: "التواصل",
+      contactBody: "أفضل طريقة للبدء هي إرسال تفاصيل النشاط أو الحملة الحالية عبر واتساب.",
     },
   },
   en: {
     meta: {
       homeTitle: "Abdullah Kmar | Performance Marketing Specialist",
       homeDescription:
-        "Professional portfolio for Abdullah Kmar, performance marketing specialist and media buyer for Meta, Google, Instagram, and TikTok ads.",
+        "Portfolio for Abdullah Kmar, a performance marketing specialist and media buyer for Meta, Google, Instagram, and TikTok campaigns focused on measurable lead generation.",
       campaignsTitle: "Campaign Results | Abdullah Kmar",
       campaignsDescription:
-        "A curated gallery of campaign result screenshots and performance marketing case studies by Abdullah Kmar.",
+        "Short case studies and real performance screenshots from Google and Meta campaigns managed by Abdullah Kmar.",
       cvTitle: "CV | Abdullah Kmar",
       cvDescription:
-        "Professional CV for Abdullah Kmar, performance marketing specialist and media buyer.",
+        "Professional CV for Abdullah Kmar, a performance marketing specialist focused on lead generation and data-led campaign optimization.",
     },
     nav: {
       about: "About",
@@ -230,81 +454,128 @@ export const dictionary = {
       openPreview: "Open preview",
       close: "Close",
       pageIntro: "Portfolio",
+      caseStudy: "Mini case study",
+      business: "Business",
+      goal: "Goal",
+      optimized: "What was optimized",
+      result: "Visible result",
+      primaryCta: "Start on WhatsApp",
+      secondaryLinks: "Other links",
     },
     home: {
-      heroTitle: "I turn ad budgets into measurable growth.",
+      heroTitle: "Performance campaigns built for measurable growth",
       heroLead:
-        "I am Abdullah Kmar, a performance marketing specialist and media buyer focused on building and optimizing Meta, Google, and TikTok campaigns for better leads and more efficient acquisition costs.",
+        "I help businesses launch and optimize Meta, Google, TikTok, and Instagram campaigns with a clear focus on qualified leads, cost per result, conversion tracking, and steady performance improvement.",
       heroPoints: ["Meta Ads", "Google Ads", "Instagram Ads", "TikTok Ads"],
-      aboutTitle: "Practical expertise behind every media decision",
+      aboutTitle: "Media decisions guided by data, not guesswork",
       aboutBody:
-        "I focus on the full picture: market context, campaign structure, message and creative testing, data reading, and spend optimization so every decision is tied to a clear metric.",
-      servicesTitle: "Performance marketing services built for growth",
+        "I treat each campaign as a full system: market context, account structure, message angles, audience and creative testing, data analysis, and budget optimization tied to a clear business goal.",
+      servicesTitle: "Clear performance marketing services",
       servicesSubtitle:
-        "From planning to daily optimization, the goal is a scalable campaign system rather than isolated ads.",
-      brandsTitle: "Brands and projects I worked with",
-      campaignsTitle: "Real campaign results, presented clearly",
+        "From planning to daily optimization, I focus on campaign systems that create better opportunities and reduce wasted spend.",
+      brandsTitle: "Experience across markets and projects",
+      campaignsTitle: "Real campaign results as short case studies",
       campaignsSubtitle:
-        "Every result image keeps its original aspect ratio so dashboards stay readable with no stretching or random cropping.",
-      cvTitle: "A concise CV with quick access",
+        "Each card explains the platform, business type, goal, what was optimized, and the visible result when the screenshot clearly shows numbers.",
+      campaignsCtaTitle: "Want similar results?",
+      campaignsCtaBody: "Contact me to review your current campaign and identify practical improvements in targeting, messaging, and cost.",
+      cvTitle: "A concise CV focused on what matters",
       cvBody:
-        "The CV page highlights experience, tools, skills, and contact information, with a direct download button for the original file.",
-      contactTitle: "Ready to improve your campaign results?",
+        "A clear summary of skills, ad platforms, practical experience, and direct contact details, with a downloadable PDF version.",
+      contactTitle: "Have a campaign that needs improvement?",
       contactBody:
-        "Send your business context or campaign goal, and I will respond with practical next steps for performance improvement.",
+        "Share your business or campaign details, and I’ll suggest practical steps to improve performance.",
     },
     services: [
       {
-        title: "Meta Ads",
-        body: "Facebook and Instagram campaign builds, audience and creative testing, and cost-per-message or conversion optimization.",
+        title: "Meta Ads Campaigns",
+        body: "Facebook and Instagram campaigns for messages, leads, or conversions with audience and creative testing.",
       },
       {
-        title: "Google Ads",
-        body: "Search, Display, and Performance Max campaigns focused on high-intent traffic and conversion opportunities.",
+        title: "Google Search Ads",
+        body: "Search campaigns built around clear buying or inquiry intent, with keyword, ad, and qualified-visit cost optimization.",
       },
       {
-        title: "Performance analysis",
-        body: "Tracking cost metrics, lead quality, and wasted spend to turn campaign data into decisions.",
+        title: "Lead Generation Funnels",
+        body: "Connecting ads to WhatsApp, landing pages, or message flows that reduce friction and improve follow-up quality.",
+      },
+      {
+        title: "Campaign Tracking & Analysis",
+        body: "Reviewing cost metrics, result quality, message quality, and wasted spend to turn data into decisions.",
+      },
+      {
+        title: "Conversion Optimization",
+        body: "Improving messages, offers, and post-click touchpoints to increase lead quality and reduce opportunity cost.",
+      },
+      {
+        title: "Retargeting & Audience Testing",
+        body: "Segmenting audiences, testing intent, and building retargeting campaigns for users most likely to convert.",
       },
     ],
-    focus: ["Lead Generation", "Conversion Optimization", "Maximize ROI", "Data Analysis"],
+    focus: ["Lead Generation", "Conversion Tracking", "Cost Per Result", "Audience Testing"],
     brands: [
-      ["Flourite", "Saudi Arabia"],
-      ["Achievement Services Broker", "UAE"],
-      ["Juventus Car Rental", "UAE"],
-      ["Code Wave", "Egypt"],
-    ],
+      {
+        name: "Flourite",
+        market: { ar: "السعودية", en: "Saudi Arabia" },
+        context: {
+          ar: "حملات أداء لزيادة الطلب وتحسين جودة فرص التواصل.",
+          en: "Performance campaigns focused on demand generation and lead quality.",
+        },
+      },
+      {
+        name: "Achievement Services Broker",
+        market: { ar: "الإمارات", en: "UAE" },
+        context: {
+          ar: "إعلانات بحث لخدمات وساطة وإنجاز معاملات داخل سوق تنافسي.",
+          en: "Search ads for brokerage and processing services in a competitive market.",
+        },
+      },
+      {
+        name: "Juventus Car Rental",
+        market: { ar: "الإمارات", en: "UAE" },
+        context: {
+          ar: "حملات لجذب طلبات تأجير سيارات وتحسين جودة الاستفسارات.",
+          en: "Campaigns to generate car-rental inquiries and improve lead quality.",
+        },
+      },
+      {
+        name: "Code Wave",
+        market: { ar: "مصر", en: "Egypt" },
+        context: {
+          ar: "دعم تسويقي لمشروع خدمات رقمية مع تركيز على وضوح العرض.",
+          en: "Marketing support for a digital-services project with clearer positioning.",
+        },
+      },
+    ] satisfies Brand[],
     cv: {
       title: "CV",
+      profileTitle: "Profile Summary",
       summary:
-        "Performance marketing specialist and media buyer focused on lead generation campaigns, cost-per-result optimization, and data-driven media decisions.",
-      experienceTitle: "Experience",
-      experience: [
-        {
-          role: "Performance Marketing Specialist & Media Buyer",
-          company: "Multiple client projects",
-          period: "2024 - Present",
-          bullets: [
-            "Managed and optimized Meta, Google, and TikTok campaigns based on business goals.",
-            "Analyzed daily performance to identify wasted spend and improve lead quality.",
-            "Tested messaging, creatives, and audiences to improve cost per result.",
-          ],
-        },
+        "Performance marketing specialist and media buyer working across lead generation and cost-per-result optimization on Meta, Google, and TikTok, with a strong focus on message quality, conversion tracking, and turning daily data into practical decisions.",
+      coreSkillsTitle: "Core Skills",
+      coreSkills: [
+        "Campaign strategy",
+        "Media buying",
+        "Lead generation",
+        "Cost-per-result optimization",
+        "Audience and creative testing",
+        "Performance reporting",
       ],
-      skillsTitle: "Skills",
-      skills: [
-        "Campaign Strategy",
-        "Media Buying",
-        "Lead Generation",
-        "Conversion Tracking",
-        "Creative Testing",
-        "Reporting",
+      platformsTitle: "Advertising Platforms",
+      platforms: ["Meta Ads Manager", "Google Ads", "TikTok Ads", "Instagram Ads"],
+      highlightsTitle: "Experience Highlights",
+      highlights: [
+        "Launched and optimized messaging, conversion, and traffic campaigns around each business goal.",
+        "Reviewed lead quality, not just lead volume, to improve targeting and messaging.",
+        "Analyzed daily cost trends to identify wasted spend and performance improvement opportunities.",
+        "Tested ad angles and audience segments to reach a better cost per result.",
       ],
-      toolsTitle: "Tools and platforms",
-      tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads", "Google Analytics", "Looker Studio"],
-      educationTitle: "Education",
-      education: "Practical background in digital marketing and campaign performance analysis.",
-      contactTitle: "Contact information",
+      toolsTitle: "Tools",
+      tools: ["Google Analytics", "Looker Studio", "Meta Events Manager", "Google Tag Manager", "Sheets"],
+      downloadTitle: "Download CV",
+      downloadBody: "Download the PDF version for a quick review or to share with your team.",
+      contactTitle: "Contact",
+      contactBody: "The fastest way to start is to send your business or current campaign details on WhatsApp.",
     },
   },
 } as const;

@@ -49,81 +49,83 @@ export default async function CvPage({ params }: PageProps) {
 
   return (
     <SiteShell locale={locale} page="cv">
-      <main className="px-5 py-16 sm:px-8 lg:py-24">
+      <main className="px-5 py-14 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <aside className="h-fit rounded-[2rem] border border-white/10 bg-surface p-7 lg:sticky lg:top-28">
+          <aside className="h-fit rounded-[1.75rem] border border-white/10 bg-surface p-7 lg:sticky lg:top-28">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-accent">
               {content.common.pageIntro}
             </p>
-            <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl">{cv.title}</h1>
+            <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-5xl">{cv.title}</h1>
             <p className="mt-5 text-lg leading-9 text-slate-300">{cv.summary}</p>
             <div className="mt-8 flex flex-col gap-3">
               <Link
                 href={contact.cvHref}
                 target="_blank"
-                className="rounded-full bg-accent px-6 py-4 text-center text-sm font-black text-white transition hover:bg-accent-strong"
+                className="rounded-full bg-accent px-6 py-4 text-center text-sm font-black text-white shadow-lg shadow-accent/20 transition hover:-translate-y-0.5 hover:bg-accent-strong"
               >
                 {content.common.downloadCv}
               </Link>
               <Link
-                href={`mailto:${contact.email}`}
-                className="rounded-full border border-white/15 px-6 py-4 text-center text-sm font-black text-white transition hover:border-accent/70"
+                href={contact.whatsappHref}
+                target="_blank"
+                className="rounded-full border border-white/15 px-6 py-4 text-center text-sm font-black text-white transition hover:-translate-y-0.5 hover:border-accent/70 hover:bg-white/5"
               >
-                {content.common.contactMe}
+                {content.common.primaryCta}
               </Link>
             </div>
           </aside>
 
           <div className="space-y-6">
-            <section className="rounded-[2rem] border border-white/10 bg-surface p-7">
-              <h2 className="text-2xl font-black text-white">{cv.experienceTitle}</h2>
-              <div className="mt-6 space-y-6">
-                {cv.experience.map((item) => (
-                  <article key={item.role} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                      <div>
-                        <h3 className="text-xl font-black text-white">{item.role}</h3>
-                        <p className="mt-1 text-slate-400">{item.company}</p>
-                      </div>
-                      <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-accent">
-                        {item.period}
-                      </p>
-                    </div>
-                    <ul className="mt-5 space-y-3 text-slate-300">
-                      {item.bullets.map((bullet) => (
-                        <li key={bullet} className="leading-8">
-                          {bullet}
-                        </li>
-                      ))}
-                    </ul>
-                  </article>
-                ))}
-              </div>
+            <section className="rounded-[1.75rem] border border-white/10 bg-surface p-7">
+              <h2 className="text-2xl font-black text-white">{cv.profileTitle}</h2>
+              <p className="mt-4 leading-9 text-slate-300">{cv.summary}</p>
             </section>
 
             <section className="grid gap-6 md:grid-cols-2">
-              <CvBlock title={cv.skillsTitle} items={cv.skills} />
+              <CvBlock title={cv.coreSkillsTitle} items={cv.coreSkills} />
+              <CvBlock title={cv.platformsTitle} items={cv.platforms} />
+            </section>
+
+            <section className="rounded-[1.75rem] border border-white/10 bg-surface p-7">
+              <h2 className="text-2xl font-black text-white">{cv.highlightsTitle}</h2>
+              <ul className="mt-5 grid gap-3 text-slate-300">
+                {cv.highlights.map((highlight) => (
+                  <li key={highlight} className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 leading-8">
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="grid gap-6 md:grid-cols-2">
               <CvBlock title={cv.toolsTitle} items={cv.tools} />
+              <section className="rounded-[1.75rem] border border-white/10 bg-surface p-7">
+                <h2 className="text-2xl font-black text-white">{cv.downloadTitle}</h2>
+                <p className="mt-4 leading-8 text-slate-300">{cv.downloadBody}</p>
+                <Link
+                  href={contact.cvHref}
+                  target="_blank"
+                  className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-slate-200"
+                >
+                  {content.common.downloadCv}
+                </Link>
+              </section>
             </section>
 
-            <section className="rounded-[2rem] border border-white/10 bg-surface p-7">
-              <h2 className="text-2xl font-black text-white">{cv.educationTitle}</h2>
-              <p className="mt-4 leading-8 text-slate-300">{cv.education}</p>
-            </section>
-
-            <section className="rounded-[2rem] border border-white/10 bg-surface p-7">
+            <section className="rounded-[1.75rem] border border-white/10 bg-surface p-7">
               <h2 className="text-2xl font-black text-white">{cv.contactTitle}</h2>
+              <p className="mt-4 leading-8 text-slate-300">{cv.contactBody}</p>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:bg-white/[0.07]" href={`mailto:${contact.email}`}>
+                <Link className="rounded-2xl bg-accent p-4 font-black text-white transition hover:-translate-y-0.5 hover:bg-accent-strong" href={contact.whatsappHref} target="_blank">
+                  {content.common.whatsapp}: {contact.phone}
+                </Link>
+                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/[0.07]" href={`mailto:${contact.email}`}>
                   {contact.email}
                 </Link>
-                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:bg-white/[0.07]" href={contact.whatsappHref} target="_blank">
-                  {contact.phone}
-                </Link>
-                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:bg-white/[0.07]" href={contact.linkedin} target="_blank">
+                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/[0.07]" href={contact.linkedin} target="_blank">
                   LinkedIn
                 </Link>
-                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:bg-white/[0.07]" href={contact.linktree} target="_blank">
+                <Link className="rounded-2xl bg-white/[0.04] p-4 text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/[0.07]" href={contact.linktree} target="_blank">
                   Linktree
                 </Link>
               </div>
@@ -137,7 +139,7 @@ export default async function CvPage({ params }: PageProps) {
 
 function CvBlock({ title, items }: { title: string; items: readonly string[] }) {
   return (
-    <section className="rounded-[2rem] border border-white/10 bg-surface p-7">
+    <section className="rounded-[1.75rem] border border-white/10 bg-surface p-7">
       <h2 className="text-2xl font-black text-white">{title}</h2>
       <div className="mt-5 flex flex-wrap gap-2">
         {items.map((item) => (

@@ -59,7 +59,15 @@ export default async function CampaignsPage({ params }: PageProps) {
             <CampaignGallery
               campaigns={campaigns}
               locale={locale}
-              labels={{ openPreview: content.common.openPreview, close: content.common.close }}
+              labels={{
+                openPreview: content.common.openPreview,
+                close: content.common.close,
+                caseStudy: content.common.caseStudy,
+                business: content.common.business,
+                goal: content.common.goal,
+                optimized: content.common.optimized,
+                result: content.common.result,
+              }}
             />
           </div>
         </div>

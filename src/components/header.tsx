@@ -14,20 +14,20 @@ export function Header({ locale, page }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-background/82 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href={home} className="text-xl font-black tracking-tight text-white">
+      <div className="mx-auto flex min-h-18 w-full max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
+        <Link href={home} dir="ltr" className="shrink-0 text-xl font-black tracking-tight text-white">
           {content.common.brand}
           <span className="text-accent">{content.common.brandSuffix}</span>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-semibold text-slate-300 md:flex">
+        <nav className="hidden items-center justify-center gap-5 text-sm font-semibold text-slate-300 lg:flex">
           <Link className="transition hover:text-white" href={`${home}#about`}>
             {content.nav.about}
           </Link>
           <Link className="transition hover:text-white" href={`${home}#services`}>
             {content.nav.services}
           </Link>
-          <Link className="transition hover:text-white" href={getLocalizedPath(locale, "campaigns")}>
+          <Link className="transition hover:text-white" href={`${home}#campaigns`}>
             {content.nav.campaigns}
           </Link>
           <Link className="transition hover:text-white" href={getLocalizedPath(locale, "cv")}>
@@ -38,13 +38,13 @@ export function Header({ locale, page }: HeaderProps) {
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href={getLocalizedPath(alternate, page)}
-            className="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-slate-200 transition hover:border-accent/60 hover:text-white sm:px-4"
+            className="rounded-full border border-white/10 px-3 py-2 text-xs font-bold text-slate-200 transition hover:-translate-y-0.5 hover:border-accent/60 hover:text-white sm:px-4"
           >
             {content.nav.language}
           </Link>
           <Link
             href={`${home}#contact`}
-            className="rounded-full bg-white px-4 py-2 text-xs font-black text-slate-950 transition hover:bg-slate-200 sm:px-5"
+            className="rounded-full bg-white px-4 py-2 text-xs font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-slate-200 sm:px-5"
           >
             {content.nav.contact}
           </Link>
