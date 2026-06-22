@@ -5,6 +5,7 @@ export type Campaign = {
   image: string;
   width: number;
   height: number;
+  orientation: "horizontal" | "vertical";
   alt?: Record<Locale, string>;
   platform: string;
   business: Record<Locale, string>;
@@ -28,6 +29,7 @@ export const campaigns: Campaign[] = [
     image: "/assets/images/campaign-meta-messaging-table-results.png",
     width: 1805,
     height: 420,
+    orientation: "horizontal",
     alt: {
       ar: "لقطة نظيفة من جدول مدير إعلانات Meta تعرض نتائج حملات رسائل متعددة مع المحادثات والوصول والظهور والإنفاق",
       en: "Clean Meta Ads Manager table screenshot showing multiple messaging campaign results, reach, impressions, and spend",
@@ -79,6 +81,7 @@ export const campaigns: Campaign[] = [
     image: "/assets/images/swimming-coach-uae-meta-ads.png",
     width: 715,
     height: 1438,
+    orientation: "vertical",
     alt: {
       ar: "لقطة من تطبيق Meta Ads تعرض حملة رسائل لمدرب سباحة في الإمارات مع الإنفاق والنتائج وتوصية تحسين تكلفة المحادثة",
       en: "Meta Ads mobile screenshot showing a UAE swimming coach messaging campaign with spend, results, and a conversation cost optimization recommendation",
@@ -130,6 +133,7 @@ export const campaigns: Campaign[] = [
     image: "/assets/images/campaign-govents-google-ads.jpeg",
     width: 1529,
     height: 617,
+    orientation: "horizontal",
     platform: "Google Ads",
     business: {
       ar: "خدمات فعاليات وتجهيزات في سوق الإمارات",
@@ -165,6 +169,7 @@ export const campaigns: Campaign[] = [
     image: "/assets/images/campaign-achievement-google-ads.jpeg",
     width: 1600,
     height: 506,
+    orientation: "horizontal",
     platform: "Google Ads",
     business: {
       ar: "خدمات وساطة وإنجاز معاملات في الإمارات",
@@ -200,6 +205,7 @@ export const campaigns: Campaign[] = [
     image: "/assets/images/campaign-meta-messaging-results.jpeg",
     width: 719,
     height: 1065,
+    orientation: "vertical",
     platform: "Meta Ads",
     business: {
       ar: "حملة رسائل عبر فيسبوك وإنستجرام",
@@ -235,6 +241,7 @@ export const campaigns: Campaign[] = [
     image: "/assets/images/campaign-meta-tailored-messages.jpeg",
     width: 705,
     height: 1064,
+    orientation: "vertical",
     platform: "Meta Ads",
     business: {
       ar: "حملة رسائل مخصصة حسب نية العميل",

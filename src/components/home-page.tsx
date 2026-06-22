@@ -132,6 +132,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           <CampaignGallery
             campaigns={campaigns}
             locale={locale}
+            layout="featured"
             labels={{
               openPreview: content.common.openPreview,
               close: content.common.close,
